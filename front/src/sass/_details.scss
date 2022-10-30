@@ -1,0 +1,62 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.details{
+    padding: 24px;
+    &__company{
+        color: v.$Orange;
+        //esto cambia todo a mayusculas desde el css sin tener que cambiarlo al home o html
+        text-transform: uppercase;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+    &__tittle{
+        font-size: 1.7em;
+        margin-bottom: 16px;
+    }
+    &__description{
+        font-size: 0.94em;
+        color: v.$Dark-grayish-blue;
+        line-height: 24px;
+        margin-bottom: 24px;
+        
+    }
+    &__prices{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        //los centra
+        align-items: center;
+
+    }
+    &__now{
+        font-size: 1.8em;
+        font-weight: 700;
+        // pone el precio y el descuento unmo al lado del otro
+        display: flex;
+        //los centra
+        align-items: center;
+        //y les da un espacio con gap
+        gap: 18px;
+
+    }
+    &__discount{
+        font-size: 0.5em;
+        background-color: v.$Pale-orange;
+        color: v.$Orange;
+        padding: 4px;
+        border-radius: 4px;
+
+    }&__before{
+        font-weight: 700;
+        color: v.$Dark-grayish-blue;
+        text-decoration:line-through;
+    }
+    &__button{
+        @include mixins.button
+        
+    }
+
+
+}

@@ -1,0 +1,80 @@
+@use 'variables';
+
+.header{
+    //border: 1px solid red;
+    //display flex align nos ayuda a ubicar todo de una mejor forma es como una especi de excel o word
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    padding: 0 50px;
+    @media(min-width: 1115px){
+        height: 112px;
+        border-bottom: 1px solid variables.$Grayish-blue;
+    }
+    &__navigation{
+        width: 175px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media(min-width: 1115px){
+            width: 590px;
+        }
+        // funcion hover y cursor para que el carrito sea accesible con el mouse
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__menu{
+        &:hover{
+            cursor: pointer;
+        }
+        @media( min-width: 1115px){
+            display: none;
+        }
+    }
+    &__cart{
+        //la posicion del circulito naranja se ,manaeja desde aca con position u luego desde su otro contenendor --notification
+        position: relative;
+        &--notification{
+            display: none;
+            background-color: variables.$Orange;
+            width: 15px;
+            height: 12px;
+            border-radius: 16px;
+            position: absolute;
+            top: -2px;
+            right: -5px;
+            font-size: 0.6em;
+            text-align: center;
+            color: variables.$White;
+        }
+        &:hover{
+            cursor: pointer;
+            
+        }
+
+    }
+    &__cart-avatar{
+        display: flex;
+        width: 70px;
+        align-items: center;
+        justify-content: space-between;
+        @media( min-width: 1115px){
+            width: 125px;
+        }
+    }
+    &__avatar{
+        width: 24px;
+        @media(min-width:1115px){
+            width: 68px;
+        }
+        &:hover{
+            cursor: pointer;
+            border: 2px solid variables.$Orange;
+            border-radius: 50%;
+        }
+        
+    }
+}

@@ -1,0 +1,59 @@
+@use 'variables' as v;
+@mixin modal-background {
+    background-color: v.$Black-modal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //display pone en oscuro el la pantalla cuando mostrar el menu de hamburgeso con los items    
+    display: none;
+    z-index: 1;
+}
+
+@mixin image-btn ($top, $left){
+    
+        background-color: v.$White;
+        width: 40px;
+        height: 40px;
+        padding: 12px;
+        border-radius: 50%;
+        position: absolute;
+        top: $top,;
+        left: $left;
+        //el hover sirve para activar el puntero cuando pasa por la imagen o link
+        &:hover{
+            cursor: pointer;
+        }
+    
+}
+
+@mixin changeNumber($pv, $ph){
+        width: 25px;
+        height: 100%;
+        padding: $pv $ph;
+        &:hover{
+            cursor: pointer;
+        }        
+    
+}
+
+@mixin button{
+    background-color: v.$Orange;
+    width: 100%;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    color: v.$White;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+}
