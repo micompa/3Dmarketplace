@@ -57,6 +57,27 @@
         @include mixins.button
         
     }
+    
+    @media(min-width: 1115px){
+        width: 446px;
+        padding-top: 60px;
+        &__title{
+            font-size: 2.7em;
+            margin-bottom: 48px;
+        }
+        &__description{
+            font-size: 0.9em;
+            margin-bottom: 37px;
+        }
+        &__prices{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__product-quantity{
+            display: flex;
+            gap: 32px;
+        }
+    }
 
 
 }

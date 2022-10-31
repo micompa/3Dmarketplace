@@ -9,7 +9,7 @@
     width: 250px;
     height: 100%;
     padding: 28px 24px;
-    display: block;
+    display: none;
     &__items{
         //border: 1px solid red;
         display: flex;
@@ -24,12 +24,17 @@
         color: variables.$Very-dark-blue;
         font-weight: 700;
         font-size: 1.1em;
+        @media(min-width: 1115px){
+        display: block;
+    }
 
     }
     &__close-icon:hover{
         cursor: pointer;
 
     }
+    
+    
 
     
 }

@@ -11,7 +11,7 @@
     z-index: 1;
 }
 
-@mixin image-btn ($top, $left){
+@mixin image-btn ($top, $left, $showdesktop){
     
         background-color: v.$White;
         width: 40px;
@@ -25,10 +25,19 @@
         &:hover{
             cursor: pointer;
         }
+        @media (min-width: 1115px){
+            @if $showdesktop == true{
+                display: block;
+            }@else{
+                display: none;
+            }
+        }
     
 }
 
 @mixin changeNumber($pv, $ph){
+        background-color: v.$Light-grayish-blue;
+        border-radius: 8px;
         width: 25px;
         height: 100%;
         padding: $pv $ph;

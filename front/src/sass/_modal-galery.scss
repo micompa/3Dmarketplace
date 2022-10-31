@@ -1,0 +1,52 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.modal-gallery{
+    width: 550px;
+    //border-color: 1px solid red;
+    &__background{
+        //border-color: 1px solid red;
+        @include mixins.modal-background;
+        //receurda cambiar luego a grid para su funcionalidad cuando implementes el js
+        //display: grid;
+        place-content: center;
+    }
+    &__close{
+        width: 16px;
+        &:hover{
+            cursor: pointer;
+            filter: 100%;
+        }
+    }
+    &__image-container{
+        background-image: url('../public/images/image-product-1.jpg');
+        height: 446px;
+        background-size: cover;
+        border-radius: 16px;
+        margin-bottom: 32px;
+        position: relative;
+
+    }
+    &__thumbnails{
+        width: 450px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__thumbnail{
+        width: 90px;
+        border-radius: 16px;
+
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$Orange;
+        }
+    }
+    &__previous{
+        @include mixins.image-btn(190px, 5px, true) 
+    }
+    &__next{
+        @include mixins.image-btn(190px, 505px, true) 
+    }
+
+}

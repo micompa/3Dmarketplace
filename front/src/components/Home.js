@@ -113,7 +113,7 @@ export const Home = () => {
                         <p class="cart-modal__title">Carrito</p>
                         <div class="cart-modal__checkout-container">
                             <div class="cart-modal__details-container">
-                            <img src='./images/image-product-1-thumbnail.jpg' alt=''></img>
+                            <img class="cart-modal__image" src='./images/image-product-1-thumbnail.jpg' alt=''></img>
                                 <div>
                                     <p class="cart-modal__product">Producto.prodcuto seleccionado</p>
                                     <p class="cart-modal__price">$Producto.precio <span>seleccionado</span></p>
@@ -132,11 +132,11 @@ export const Home = () => {
                                 <img className='modal-gallery__next' src='./images/icon-next.svg' alt='next'></img>
 
                                 </div>
-                                <div className='modal-gallery__thumnails'>
-                                <img id="m1" class="modal-gallery__thumnail" src='./images/image-product-1-thumbnail.jpg' alt='thumbnail'></img>
-                                <img id="m2" class="modal-gallery__thumnail" src='./images/image-product-2-thumbnail.jpg' alt='thumbnail'></img>
-                                <img id="m3" class="modal-gallery__thumnail" src='./images/image-product-3-thumbnail.jpg' alt='thumbnail'></img>
-                                <img id="m4" class="gmodal-gallery__thumnail" src='./images/image-product-4-thumbnail.jpg' alt='thumbnail'></img>
+                                <div className='modal-gallery__thumbnails'>
+                                <img id="m1" class="modal-gallery__thumbnail" src='./images/image-product-1-thumbnail.jpg' alt='thumbnail'></img>
+                                <img id="m2" class="modal-gallery__thumbnail" src='./images/image-product-2-thumbnail.jpg' alt='thumbnail'></img>
+                                <img id="m3" class="modal-gallery__thumbnail" src='./images/image-product-3-thumbnail.jpg' alt='thumbnail'></img>
+                                <img id="m4" class="modal-gallery__thumbnail" src='./images/image-product-4-thumbnail.jpg' alt='thumbnail'></img>
                                 </div>
                             </article>
                        </div>
