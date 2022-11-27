@@ -17,10 +17,6 @@ const productosSchema=mongoose.Schema({
       type:String,
       required:[true,"Por favor registre una descripcion para el producto."]
     },
-    calificacion:{
-        type: Number,
-        default: 0
-    },
     imagen:[
         {
             public_id:{

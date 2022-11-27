@@ -84,12 +84,12 @@ exports.forgotPassword = catchAsyncErrors ( async( req, res, next) =>{
 
     const mensaje=`Hola!\n\nTu link para ajustar una nueva contraseña es el 
     siguiente: \n\n${resetUrl}\n\n
-    Si no solicitaste este link, por favor comunicate con soporte.\n\n Att:\nVetyShop Store`
+    Si no solicitaste este link, por favor comunicate con soporte.\n\n Att:\n3D Marketplace`
 
     try{
         await sendEmail({
             email:user.email,
-            subject: "VetyShop Recuperación de la contraseña",
+            subject: "3D Marketplace Recuperación de la contraseña",
             mensaje
         })
         res.status(200).json({
@@ -213,7 +213,7 @@ exports.getAllUsers = catchAsyncErrors(async(req, res, next)=>{
     })
 })
 
-//Ver el detalle de 1 usuario
+//Ver el detalle de1 usuario
 exports.getUserDetails= catchAsyncErrors(async(req, res, next)=>{
     const user= await User.findById(req.params.id);
 
